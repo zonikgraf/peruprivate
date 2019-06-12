@@ -1,0 +1,355 @@
+/**********  PUBLIC  **********/
+@font-face {
+    font-family: 'Martel';
+    src: url('fonts/martel/Martel-Regular.eot');
+    src: url('fonts/martel/Martel-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/martel/Martel-Regular.woff') format('woff'),
+        url('fonts/martel/Martel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display:  swap;
+}
+@font-face {
+    font-family: 'Martel';
+    src: url('fonts/martel/Martel-Bold.eot');
+    src: url('fonts/martel/Martel-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/martel/Martel-Bold.woff') format('woff'),
+        url('fonts/martel/Martel-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display:  swap;
+}
+@font-face {
+    font-family: 'SansPro';
+    src: url('fonts/sanspro/SourceSansPro-Regular.eot');
+    src: url('fonts/sanspro/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/sanspro/SourceSansPro-Regular.woff') format('woff'),
+        url('fonts/sanspro/SourceSansPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display:  swap;
+}
+@font-face {
+    font-family: 'SansPro';
+    src: url('fonts/sanspro/SourceSansPro-Bold.eot');
+    src: url('fonts/sanspro/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/sanspro/SourceSansPro-Bold.woff') format('woff'),
+        url('fonts/sanspro/SourceSansPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display:  swap;
+}
+body {
+    padding-top: 72px;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #282b2f;
+    font-family: 'SansPro', serif;
+}
+.section-title {
+    font-family: 'Martel', sans-serif;
+    position: relative;
+}
+.section-title::before {
+    content: '';
+    width: 20%;
+    height: 2px;
+    bottom: -5px;
+    position: absolute;
+    background-color: #f5841f;
+}
+.tipo-family {
+    font-family: 'Martel', sans-serif;
+}
+.tipo-font {
+    font-size: 3rem;
+}
+p {
+    color:#aaa;
+}
+/**********  HEADER  **********/
+.nav-link {
+    opacity: .5;
+    text-decoration: none !important;
+    position: relative;
+    text-decoration: none;
+    transition: opacity .3s ease-out;
+    -webkit-transition: opacity .3s ease-out;
+}
+.nav-link-booking {
+    background-color: #f5841f;
+    opacity: 1;
+}
+.nav-link::before {
+    content: '';
+    width: 0px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    background-color: #f5841f;
+    transition: width .3s ease-out;
+    -webkit-transition: width .3s ease-out;
+}
+.nav-link.active,
+.nav-link:hover {
+    opacity: 1;
+}
+.nav-link.active::before,
+.nav-link:hover::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: #f5841f;
+}
+.logo {
+    cursor: pointer;
+    width: 280px;
+}
+.navbar-mobile {
+    transition: all .3s ease-out;  
+ }
+/**********  SLIDER  **********/
+.carousel-caption-private {
+    left: 15%;
+    right: inherit;
+    bottom: 40%;
+}
+.carousel-caption-title {
+    font-size: 3.5rem;
+    font-family: 'Martel', sans-serif;
+}
+/********** DESTINOS **********/
+.card-private {
+    height: 100%;
+    overflow: hidden;
+    border: transparent;
+    transform: translateY(0);
+    background-color: #2f3439;
+    transition: box-shadow .3s ease-out, transform .3s ease-out;
+    -webkit-transition: box-shadow .3s ease-out, transform .3s ease-out;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 39.6px 0.4px;
+}
+.card-private:hover {
+    z-index: 2;
+    transform: translateY(-4px);
+    box-shadow: rgba(0, 0, 0, 0.49) 0px 10px 40px 2px;
+}
+.card-title {
+    font-family: 'Martel', sans-serif;
+}
+.card p {
+    color:#aaa;
+}
+.card-poster {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: auto;
+    height: 99.2%;
+    transition: transform .3s ease-out;
+    -webkit-transition: transform .3s ease-out;
+    transform: translate(-25%,0) scale(1,1);
+    -webkit-transform: translate(-25%,0) scale(1,1);
+}
+.card-body-private {
+    z-index: 1;
+    transition: background-color .3s ease-out;
+    -webkit-transition: background-color .3s ease-out;
+    background-color: #2f3438;
+    background: linear-gradient(0deg, rgba(47,52,57,1) 0%, rgba(47, 52, 57, 0.94) 100%);
+}
+.card-private:hover .card-poster {
+    transform: translate(-25%,-10%) scale(.8,.8);
+    -webkit-transform: translate(-25%,-10%) scale(.8,.8);
+}
+.card-private:hover .card-body-private {
+    z-index: 2;
+    background-color: #2f3438;
+}
+.card-private--horizontal .row {
+    height: 100%;
+}
+.card-poster--horizontal {
+    top: 0;
+    left: 0;
+    transform: translate(-28%,0) scale(1,1);
+    -webkit-transform: translate(-28%,0) scale(1,1);
+}
+.card-private--horizontal:hover .card-poster--horizontal {
+    transform: translate(-35%,0) scale(1,1);
+    -webkit-transform: translate(-35%,0) scale(1,1);
+}
+.card-body--horizontal {
+    background: linear-gradient(270deg, rgba(47,52,57,1) 0%, rgb(47, 52, 57) 67%, rgba(47, 52, 57, 0.87) 100%);
+}
+.price {
+    text-align: right;
+}
+/********** SECCION INFORMATIVO **********/
+.section-informe {
+    background-color: #f5841f;
+}
+.informe-icon {
+    height: 100px;
+    padding: .5rem;
+    border-radius: 50%;
+}
+.informe-icon--rotate {
+    background: #f58725;
+    transform: rotate(160deg);
+    -webkit-transform: rotate(160deg);
+    border: 2px dashed #a5550e;
+    box-shadow: 0 0 0 20px #ff9535;
+}
+.focus {
+    box-shadow: 0 0 0 0 rgba(72, 75, 79, 0.5) !important;
+    animation: focus 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+@-webkit-keyframes focus {
+    to {
+        box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+    }
+}
+@-moz-keyframes focus {
+    to {box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+    }
+}
+@-ms-keyframes focus {
+    to {
+        box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+    }
+}
+@keyframes focus {
+    to {
+        box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+    }
+}
+/********** SECCION SERVICIOS **********/
+.image-line::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 12%;
+    left: 7%;
+    border: 2px solid #f5841f;
+    z-index: -1;
+    border-radius: .25rem;
+}
+
+.custom {
+    height: auto !important;
+}
+.carousel {
+    margin-bottom: 40px;
+  }
+
+  @media screen and ( min-width: 768px ) {
+    .carousel-cell.custom { width: 66%; }
+  }
+.flickity-viewport {
+    transition: height 0.2s;
+  }
+  .carousel-cell {
+    width: 100%;
+    height: auto !important;
+    margin-right: 10px;
+    opacity: .2;
+    transition: opacity 0.3s ease-out;
+    -webkit-transition: opacity 0.3s ease-out;
+  }
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+  
+  .carousel-nav .carousel-cell {
+    width: 160px;
+  }
+  
+  .carousel-nav .carousel-cell:before {
+    font-size: 50px;
+    line-height: 80px;
+  }
+  
+  .carousel-cell.is-selected {
+      opacity: 1;
+  }
+  .icon-auto {
+    display: inline-block;
+    background-color: #f5841f;
+    padding: .5rem;
+    border-radius: 50%;
+  }
+  .bkg-carousel {
+    background-color: #c8c8ca;
+  }
+
+  .btn-booking {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 1.5rem;
+  }
+  .btn-booking-link {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    padding: 12px 2.2rem;
+    background: #f5841f;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4), 0 8px 15px rgba(0, 0, 0, 0.28);
+    border-radius: 500px;
+    color: #fff !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+.btn-close {
+    transition: background-image .3s ease;
+    background-image:  url("../img/close.png") !important;
+}
+
+.testimonio {
+    max-width: 100%;
+    height: 800px;
+    background-size: cover;
+    width: 100%;
+    background-image: url('../img/bkg-private.png');
+}
+
+.testimonio-texto {
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: bold;
+    color: #f5841f;
+    margin-right: 1rem;
+    height: 70px !important;
+    display: inline-block;
+    transform: translateY(37%);
+}
+.card-private--testimonio {
+    border: 4px solid #f5841f;
+}
+/* FOOTER */
+
+.footer-top {
+    padding: 60px 0;
+    background: #2f3438;
+    text-align: left;
+    color: #aaa;
+}
+.footer-bottom {
+    padding: 15px 0;
+    background: #282b2f;
+    color: #aaa;
+}
